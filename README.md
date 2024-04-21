@@ -39,3 +39,9 @@ Documentation in code.
 or on Mac,
 
     python3 -m notebook quantum_circuit.ipynb
+
+### Note
+
+The quantum circuit computed by the program when first opened (results of computation in the graphs at the end of the `quantum_circuit.ipynb` file) is
+
+![alt text](readme_files/image.png)
