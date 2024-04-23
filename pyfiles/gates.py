@@ -107,7 +107,7 @@ def parse_cnot(instruction: str, instr_list: list) -> None:
         for _ in range(padding): 
             instr_list[i].append([])
             
-        instr_list[i].append([]) if i == start or i == fin else instr_list.append(["cxb"])
+        instr_list[i].append([]) if i == start or i == fin else instr_list[i].append(["cxb"])
 
     instr_list[control][-1] = ["cxc"]
     instr_list[target][-1] = ["cx"]

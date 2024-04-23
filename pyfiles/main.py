@@ -5,6 +5,7 @@ import random
 from gates import s_gates, parse_cnot
 from calc import create_final_state
 
+np.set_printoptions(formatter={'complex_kind': '{:.3f}'.format})
 # get all lines from QASM File
 instructions = []
 q_reg = []
@@ -70,12 +71,12 @@ state = create_final_state(q_reg, len(q_reg)).ravel()
 y_axis, chances = [], []
 x_axis = []
 for i in range(len(state)):
-    formatter = format(i, f'0{int(np.log2(len(state)))}b')
+    pformatter = format(i, f'0{int(np.log2(len(state)))}b')
     percentage = np.power(np.abs(state[i]), 2)
 
     chances.append(percentage)
     y_axis.append(percentage * 100)
-    x_axis.append(formatter)
+    x_axis.append(pformatter)
 
 #%%
 # show result of simulating quantum circuit with x number of shots (default 8192)
