@@ -1,5 +1,7 @@
 # Quantum Simulator
 
+Completed as part of the FRI (Freshman Research Initiative) at UT Austin.
+
 ### Warning
 
 Code contains `eval()` methods, so be careful of what files you choose to read.
